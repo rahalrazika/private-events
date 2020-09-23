@@ -1,1 +1,11 @@
-<h1> Welcome </h1>
+<h1> Welcome <%= User.find_by_id(session[:user_id]).username %> </h1>
+<div>
+<% @users.each do |user|%>
+<ul>
+   <li><%= user.username%></li>
+</ul>
+<%end%>
+
+
+
+</div>
