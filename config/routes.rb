@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'users#index'
   
   resources :users
+  resources :events
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
 
