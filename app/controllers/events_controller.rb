@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
     def index
-    @events = Event.all
+        @events = Event.all
     end
 
     def new
-        @event = current_user.events.build(event_params)
-        end
+        @event = current_user.events.build
+    end
 
     def create
         @event = current_user.events.build(event_params)
@@ -16,14 +16,10 @@ class EventsController < ApplicationController
             flash.now[:alert] = "Form not submitting for some reasons"
             render :new
         end
-      
-
     end
 
     def show
         @event = Event.find(params[:id])    
-    end
-
-  
+    end 
 end
 
