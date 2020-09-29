@@ -1,4 +1,4 @@
-<h1> Welcome <%= User.find_by_id(session[:user_id]).username %> </h1>
+<h1> Welcome <%=User.find_by_id(session[:user_id]).username.to_s%> </h1>
 <div>
 <% @users.each do |user|%>
 <ul>

@@ -1,0 +1,13 @@
+<h1>New Event </h1>
+<%= form_for(@event, html: {multipart: true}) do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+  
+  <%= f.label :date %>:
+  <%= f.date_field :date%><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location%><br />
+
+  <%= f.submit %>
+<% end %>

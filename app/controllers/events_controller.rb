@@ -1,13 +1,29 @@
 class EventsController < ApplicationController
-    def index 
+    def index
+    @events = Event.all
     end
-    def show 
+
+    def new
+        @event = Event.new
     end
-    def edit
+
+    def create
+        @event = current_user.events.build(event_params)
+       if  @event.save 
+            flash[:notice] = "Event Created Successfully"
+            redirect_to root_path
+        else
+            flash.now[:alert] = "Form not submitting for some reasons"
+            render :new
+        end
+      
+
     end
-    def create 
+
+    def show
+        @event = Event.find(params[:id])    
     end
-    def update 
-    end
-    
+
+  
 end
+
