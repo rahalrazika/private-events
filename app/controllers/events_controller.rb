@@ -11,7 +11,7 @@ class EventsController < ApplicationController
         @event = current_user.events.build(event_params)
        if  @event.save 
             flash[:notice] = "Event Created Successfully"
-            redirect_to root_path
+            redirect_to events_path
         else
             flash.now[:alert] = "Form not submitting for some reasons"
             render :new
