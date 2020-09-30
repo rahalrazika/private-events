@@ -1,9 +1,10 @@
 <h1>Show Event </h1>
 
-<%  @user.attended_event.each  do |event| %>
+<%  @user.attended_events.each  do |event| %>
 <div>
-<%=  event.name %>
+<%= event.name %>
 <%= event.location %>
 <%= event.date %>
+<%= event.description%>
 </div>
 <% end %>
