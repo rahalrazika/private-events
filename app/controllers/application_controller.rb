@@ -9,7 +9,7 @@ def current_user
 end
 
 def event_params
-params.require(:event).permit(:name, :location, :date)
+params.require(:event).permit(:name, :location, :date, :description)
 end
    
 end
