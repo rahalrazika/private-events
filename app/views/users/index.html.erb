@@ -1,4 +1,8 @@
+<% if session[:user_id].present? %>
 <h1> Welcome <%=User.find_by_id(session[:user_id]).username.to_s%> </h1>
+<% else %>
+<h1> Welcome Please Log In </h1>
+<% end %>
 <div>
 <% @users.each do |user|%>
 <ul>
