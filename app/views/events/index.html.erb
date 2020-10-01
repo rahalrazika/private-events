@@ -1,10 +1,4 @@
 <h1>List of Events </h1>
 
-<% @events.each do |event|%>
-<div >
-<h4><%= event.creator.username %></h4>
-<%= event.name %>
-<%= event.location %>
-<%= event.date %>
-</div>
-<% end %>
+<%= render 'past'%>
+<%= render 'upcoming'%>
