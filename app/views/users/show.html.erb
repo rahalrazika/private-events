@@ -1,10 +1,2 @@
-<h1>Show Attendees </h1>
-
-<%  @user.attended_events.each  do |event| %>
-<div>
-<%= event.name %>
-<%= event.location %>
-<%= event.date %>
-<%= event.description%>
-</div>
-<% end %>
+<%=render 'upcoming'%>
+<%=render 'past'%>
