@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   
   resources :users 
   resources :sessions
-  resources :events
+  resources :events do
+    member do
+     post 'register'
+    end
+  end
   
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+
 
 end
