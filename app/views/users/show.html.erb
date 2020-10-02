@@ -1,0 +1,19 @@
+<h1><%= @user.username %> Events Page</h1>
+<h1>Created Events</h1>
+<h1>Past Events:</h1>
+<% @user.events.past.each do |event| %>
+<p><%= event.name %>
+<%= event.location %>
+<%= event.date %><p>
+
+<% end %>
+<h1>Upcoming Events:</h1>
+<% @user.events.upcoming.each do |event| %>
+<p><%= event.name %>
+<%= event.location %>
+<%= event.date %><p>
+<% end %>
+
+<h1>Events User Is Attending</h1>
+<%= render 'past'%>
+<%= render 'upcoming'%>

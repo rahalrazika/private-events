@@ -1,0 +1,11 @@
+<h1>Creator: <%= @event.creator.username %></h1>
+<h1>Event Name: <%= @event.name %></h1>
+<h1>Event Location: <%= @event.location %></h1>
+
+<h1>List of People Attending</h1>
+<% @event.attendees.each do |attendee|%>
+    <p><%= attendee.username %></p>
+ 
+<% end %>
+<%= button_to "Join Event", register_event_path(@event.id)%>
+

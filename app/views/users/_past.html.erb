@@ -1,0 +1,8 @@
+<h1>All Past Events</h1>
+
+    <% @user.attended_events.past.each do |event| %>
+        <h4><%= event.creator.username %></h4>
+        <%= event.name %>
+        <%= event.location %>
+        <%= event.date %> 
+    <% end %>

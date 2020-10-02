@@ -8,8 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
+    <%= link_to "Home", root_path %>
+
+<% if session[:user_id].present? %>
+  <%= link_to "All Event", events_path  %>
+  <%= link_to "New Event", new_event_path  %>
+ <% else%>
+    <%= link_to "Log In", login_path  %>     
+    <%= link_to "Register", new_user_path  %>
+<%end%>
+
     <%= yield %>
   </body>
+
 </html>
