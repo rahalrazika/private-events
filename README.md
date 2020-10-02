@@ -28,7 +28,6 @@ To migrate the database run 'rake db:migrate' you will have to do this in order 
 $ rake db:migrate
 ```
 
-# Testing
 To launch the rails server inside of your terminal you will need to navigate into the repository you have just cloned. You will do this by using `cd` inside of your terminal. Once you are inside of this folder run the command `rails server` and this start the webrick server. 
 
 Below shows the following commands you will need to run to achieve this:
