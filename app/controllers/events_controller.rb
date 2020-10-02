@@ -23,7 +23,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
   end
-  
+
   def register
     @ea = EventAttendance.new(attended_event_id: params[:id], attendee_id: session[:user_id])
     if @ea.save
