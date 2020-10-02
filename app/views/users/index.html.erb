@@ -6,7 +6,8 @@
 <div>
 <% @users.each do |user|%>
 <ul>
-   <li><%= user.username%></li>
+   <li><%= user.username %><%= link_to"view User", user_path(user)  %> </li>
+
 </ul>
 <%end%>
 
